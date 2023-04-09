@@ -3,13 +3,12 @@
 const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
 
 const list = document.querySelector('#ingredients');
-const fragment = document.createDocumentFragment(); // створюємо DocumentFragment
-
+const fragment = document.createDocumentFragment(); 
 ingredients.forEach(value => {
     const listItem = document.createElement('li');
     listItem.textContent = value;
     listItem.classList.add("item");
-    fragment.appendChild(listItem); // додаємо кожен елемент в DocumentFragment замість прямої вставки в DOM
+    fragment.appendChild(listItem); 
 });
 
 list.appendChild(fragment); 
